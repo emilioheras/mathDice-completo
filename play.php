@@ -1,29 +1,15 @@
-<?php
+<?php    
 	require_once 'login.php';	 
 	require_once 'functions.php';
-  	require_once 'dace.php';
+  require_once 'dace.php';
+  require_once './lib/page.php';
+    
+  $pageGame = new Page();
+  echo $pageGame->getHeaderGame();
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  	<meta charset="utf-8">
-    <title>Math dice Juego</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">       
-    <meta name="Pantalla juego de Math dice" content="">
-    <meta name="author" content="Emilio Heras DAW">
-    <link rel="icon" href="../../favicon.ico">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!-- CSS Bootstrap -->    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-	<link rel="stylesheet" href="./css/game.css" type="text/css"/>
-	<script type="text/javascript" src="./js/jsFunctions.js"></script>
-  </head>
-
   <body>
-  	<!--Menú superior especial para dispositivos móviles. El menú se minimizará a un solo botón-->
+	  	<!--Menú superior especial para dispositivos móviles. El menú se minimizará a un solo botón-->
 	 <div  class="container">
      <nav class="navbar navbar-inverse">
         <div>
@@ -64,11 +50,11 @@
             </ul>
             <!--Botones del extremo derecho superior-->
             <ul class="nav navbar-nav navbar-right">
-            <!--  <li><a href="#"><span class="glyphicon glyphicon-user"></span><?php //echo "<strong> Hola ".$player->getName();."</strong>" ?></a></li>-->
+            <li><a href="userData.php"><span class="glyphicon glyphicon-user"></span><strong> Perfil</strong></a></li>
 
 
 				<li class="dropdown">
-	                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span><?php echo "<strong> Hola ".$player->getName()."</strong>"?>
+	                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo "<strong> Hola ".$player->getName()."</strong>"?>
 	                <span class="caret"></span></a>
 		                <ul class="dropdown-menu">
 			                <li><a href='#'><?php echo "<strong>Apellido: ".$player->getLastName()."</strong>"?></a></li>
@@ -85,10 +71,9 @@
         </div>
      </nav>
      </div>	<!-- navbar -->
-
+	  	
 	<!-- Contenedor global -->
-    <div class="container">
-
+    <div class="container"> 
     	<!-- Texto que muestra el tipo de juego según la edad del usuario -->
 		<div class="row">
 			<div class="col-md-12">
@@ -190,11 +175,9 @@
 	</div>
 </div>
 
-
-  <!-- Pie de página -->
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+ 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>		
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
   
 </html>
