@@ -79,10 +79,9 @@ body {
     background-image: url(../img/dado_rojo.jpg);
   }
 }
-
  
 
-  h4{
+  h1+h4 {
     margin-top: 0px;
   }
 
@@ -90,4 +89,7 @@ body {
     margin-top: 1em;   
     margin-bottom: 0px;
   }
+  
+ 
+  
 
