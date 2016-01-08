@@ -1,15 +1,17 @@
 <?php
   	require_once 'dace.php';
   	require_once './lib/page.php';
-    
+
   	$pageGame = new Page();
   	echo $pageGame->getHeaderGame();
 	require_once 'login.php';
 	require_once 'operations.php';
-	
 ?>
+
   <body onload="showModalWindow()">
+  	
 	<?php
+		//Barra superior de navegación.
 		$pageGame->getNavBar();
 		//Formulario modal oculto para modificar los datos del jugador (botón perfil).
 		$pageGame->getNewDataForm();
@@ -32,7 +34,6 @@
 				<div class="col-md-4">
 				</div>
 				<div class='col-md-4 dodec'>
-					<!--<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">-->
 					<img src='img/dodec-<?php $dodecaedro=generarNumAleatorio('dodecaedro'); echo $dodecaedro; ?>.png'></img>
 				</div>
 				<div class="col-md-4">
@@ -92,8 +93,6 @@
 		</div>
 	</div>
 
-
-
 	<!-- Botones de operaciones -->
 	<div class="row">
 		<div class="col-md-12">
@@ -115,9 +114,9 @@
 	</div>
 </div>
 
- 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>		
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<?php
+		//Pie de página.
+		echo $pageGame->getFooter();
+	?>
 </body>
-  
 </html>

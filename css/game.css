@@ -42,23 +42,14 @@
   margin-top: 2em;
 }
 
-/*#modal {
-     display: none;
-     position: absolute;
-
-     background: #fff;
-     color: #333;
-     z-index:1002;
-     overflow: auto;
-}*/
 
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  /*background-color: #eee;*/
+
   /* Location of the image */
   background-image: url(../img/cuadrados.jpg);
-  /*background-image: url(../img/junior3.jpg);*/
+
   /* Image is centered vertically and horizontally at all times */
   background-position: center center;
   

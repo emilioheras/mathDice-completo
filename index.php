@@ -13,7 +13,7 @@
       if(isset($_SESSION['errorDB'])){
         $connec = new ConnectionDB();
         $connec->checkConnection();
-        $connec->showMessage('connect', null);
+        $connec->showMessage('connect', null, null);
         //destruimos la sesión para limpiar todo.
         session_destroy();
 		  }
